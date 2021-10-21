@@ -1,3 +1,5 @@
+![Contributors](https://img.shields.io/github/contributors/team-hack/PopUpFoodies?logo=github)
+
 # PopUp Foodies
 A food truck locator application that allows users to plan their next pop up meal.
 
