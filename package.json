@@ -1,0 +1,32 @@
+{
+  "name": "popupfoodies",
+  "version": "1.0.0",
+  "description": "A food truck locator application that allows users to plan their next pop up meal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "kill": "kill-port 3000 3001 8080",
+    "dev": "npm run kill && concurrently \"cd server && nodemon server.js\" \"cd client && npm start\"",
+    "install-all": "npm i && cd server && npm i && cd ../client && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-hack/PopUpFoodies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/team-hack/PopUpFoodies/issues"
+  },
+  "homepage": "https://github.com/team-hack/PopUpFoodies#readme",
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "kill-port": "^1.6.1",
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}

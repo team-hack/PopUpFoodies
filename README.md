@@ -59,10 +59,16 @@ Prototype Criteria
 
 ### Innstallation
 ```sh
-git clone <repo>
-npm i
-npm run stsrt
+$ git clone git@github.com:team-hack/PopUpFoodies.git
+$ npm run install-all
+$ npm run dev
 ```
+### Tests
+Go the extra mile and write tests for your application. Then provide examples on how to run them.
+
+### Badges
+Check out the badges hosted by shields.io.
+
 ### Credits
 List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
@@ -70,9 +76,3 @@ If you followed tutorials, include links to those here as well.
 
 ### License
 The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use https://choosealicense.com/
-
-### Tests
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
-### Badges
-Check out the badges hosted by shields.io.
