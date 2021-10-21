@@ -14,7 +14,7 @@ Additionally they want the ability to filter by certain categories, and view a p
 Prototype Criteria
 
 ## Figma Design
-[link to design]()
+[Food Truck Diagram](https://www.figma.com/file/7u6bWOVOabxatCaWEf6wU4/Food-Truck-Locator-Diagram?node-id=0%3A1)
 
 ## App Preview
 [link to preivew]()
