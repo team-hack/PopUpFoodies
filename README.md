@@ -19,6 +19,12 @@ Prototype Criteria
 ## App Preview
 [link to preivew]()
 
+## Tech Stack
+-
+-
+-
+-
+
 ## Features
 - [ ] search based on location
 - [ ] search based on user input
