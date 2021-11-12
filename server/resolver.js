@@ -1,7 +1,7 @@
-const foodTrucks = require('./mockData');
+const foodTruckRegions = require('./db/data.json');
 
 const resolvers = { Query: {
-  foodTrucks: () => foodTrucks,
+  foodTruckRegions: () => foodTruckRegions,
 },
 }
 
