@@ -5,6 +5,55 @@ const { ApolloServerPluginDrainHttpServer } = require("apollo-server-core");
 const express = require('express');
 const http = require('http');
 
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+const foodTruckRegions = [];
+const url = "https://www.bestfoodtrucks.com/food-trucks/los-angeles";
+axios.get(url).then(response => {
+  const html = response.data;
+  const $ = cheerio.load(html);
+  let resultsContainer = $("div[class='md:-mx-4 flex flex-wrap box-border']");
+  let details = resultsContainer.find("div[class='w-2/3 p-4 flex flex-col']");
+
+  details.each(function(){
+    let title = $(this).find("p[class='text-gray-900 text-lg font-medium']").text();
+    let address = $(this).find("p[class^='w-']").text();
+    let numOfTrucks = $(this).find("div[class='flex mt-1 items-center']").text().split("today")[0];
+
+    foodTruckRegions.push({
+      identifier: title || null,
+      name: title || null,
+      address: address || null,
+      numOfTrucks: numOfTrucks || null,
+      foodTrucks: [
+        {
+          name: '',
+          foodType: '',
+          description: '',
+          email: '',
+          phone: '',
+          url: '',
+          location: {
+            region: '',
+            address: '',
+            city: '',
+            state: '',          
+          },
+          socialMedia: [
+            {
+              instagram: '',
+              twitter: '',
+              facebook: '',
+            }
+          ]
+        }
+      ],
+    })
+  });
+  });
+
+
 const typeDefs = require('./schema');
 const resolvers = require('./resolver');
 
