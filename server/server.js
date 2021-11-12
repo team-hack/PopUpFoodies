@@ -7,6 +7,7 @@ const http = require('http');
 
 const axios = require('axios');
 const cheerio = require('cheerio');
+const fs = require('fs');
 
 const foodTruckRegions = [];
 const url = "https://www.bestfoodtrucks.com/food-trucks/los-angeles";
@@ -50,6 +51,11 @@ axios.get(url).then(response => {
         }
       ],
     })
+  });
+  console.log(foodTruckRegions);
+  fs.writeFile('db/data.json', JSON.stringify(foodTruckRegions), 'utf-8', function(err){
+    if(err) throw err;
+      console.log(err);
   });
   });
 
