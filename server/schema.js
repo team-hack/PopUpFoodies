@@ -1,5 +1,13 @@
 const { gql } = require('apollo-server-express');
 const typeDefs  = gql`
+type foodTruckRegion {
+  identifier: String
+  name: String
+  address: String
+  totalTrucks: String
+  foodTrucks: [Truck]
+}
+
 type Truck {
   name: String
   foodType: String
@@ -25,7 +33,7 @@ type Location {
 }
 
 type Query {
-  foodTrucks: [Truck]
+  foodTruckRegions: [foodTruckRegion]
 }
 `;
 module.exports = typeDefs;
